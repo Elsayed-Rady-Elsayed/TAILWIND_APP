@@ -7,9 +7,17 @@
         <link rel="stylesheet" href="output.css">
     </head>
     <body class="font-sans">
+        <div class="stopshow w-full h-svh absolute z-40 bg-white items-center justify-center">
+            <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            </svg>
+        </div>
         <div class="container mx-auto p-2">
-           <div class="header bg-white flex items-center justify-between  gap-7 md:gap-20 justify-start lg:gap-32 justify-start">
-            <a href="#">
+           <div class="header bg-white flex items-center justify-between  gap-7 md:gap-20 justify-start lg:gap-32 justify-start mb-2">
+            <a href="">
                 <div class="logo flex items-center gap-1 capitalize">
                         <div class="shape w-10 h-10 rounded-full p-2 bg-blue-700 relative">
                             <div class="absolute h-4 w-8 start-1 bg-white rounded-b-full bottom-1"></div>
@@ -19,9 +27,9 @@
                 </a>
                 <div class="hidden nav flex-1 md:block">
                     <ul class="flex gap-8 md:gap-5 lg:gap-10">
-                        <li><a href="" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">features</a></li>
-                        <li><a href="" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">testimonials</a></li>
-                        <li><a href="" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">pricing</a></li>
+                        <li><a href="#features" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">features</a></li>
+                        <li><a href="#testimonials" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">testimonials</a></li>
+                        <li><a href="#pricing" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">pricing</a></li>
                     </ul>
                 </div>
                 <div class="controlBtns flex gap-2 items-center">
@@ -34,17 +42,17 @@
                     <ion-icon name="menu-outline" class="text-lg block md:hidden lg:hidden"></ion-icon>
                 </div>
             </div>
-            <div class="landingPage flex items-center justify-center flex-col text-center gap-5 pt-28 lg:pt-64 md:pt-64">
+            <div class="landingPage flex items-center justify-center flex-col text-center gap-5 pt-28 lg:pt-64 md:pt-64 pb-5">
                 <h3 class="text-5xl font-semibold capitalize text-center md:text-6xl lg:text-6xl">
                     Accounting <span class="text-blue-700">made simple</span> <br> for small businesses
                 </h3>
                 <p class="w-3/4">Most bookkeeping software is accurate, but hard to use. We make the opposite trade-off, and hope you don’t get audited.</p>
                 <div class="btns flex gap-4">
-                    <div class="getfree bg-black text-white py-3 px-3 rounded-full capitalize font-semibold cursor-pointer hover:bg-gray-900">get 6 monthes free</div>
-                    <div class="watch flex cursor-pointer items-center gap-2 border justify-between py-3 px-3 rounded-full hover:border-gray-400">
+                    <button class="getfree">get 6 monthes free</button>
+                    <button class="watch">
                         <ion-icon name="play-outline" class=""></ion-icon>
                         <span>watch video</span>
-                    </div>
+                    </button>
                 </div>
                 <p class="mt-32 font-medium md:mt-52 lg:mt-52">Trusted by these six companies so far</p>
                 <div class="cards grid grid-cols-2 gap-5 mt-5 md:grid-cols-6 lg:grid-cols-6">
@@ -107,10 +115,10 @@
                 </section>
             </div>
         </div>
-        <div class="mt-32 mx-auto text-center lg:container md:container">
+        <div class="mt-32 mx-auto text-center lg:container md:container" id="features">
             <h3 class="text-3xl capitalize mb-3 font-semibold">Simplify everyday business tasks.</h3>
             <p class="text-lg w-1/2 m-auto text-gray-600 mb-5">Because you’d probably be a little confused if we suggested you complicate your everyday business tasks instead.</p>
-            <div class="cards grid grid-cols-1 gap-4 p-5 lg:p-0 md:p-0 md:gap-10 lg:gap-10 md:grid-cols-3">
+            <div class="cards grid grid-cols-1 gap-4 p-5 lg:p-3 md:p-3 md:gap-10 lg:gap-10 md:grid-cols-3 ">
                 <div class="item text-start">
                     <ion-icon name="fitness-outline" class="text-white p-1 rounded-lg text-3xl bg-blue-500"></ion-icon>
                     <p class="my-3 capitalize text-blue-600 font-semibold">reporting</p>
@@ -135,8 +143,259 @@
                 <img src="images/por.webp" alt="" class="w-1/3 object-cover rounded-s-xl brightness-75 hidden md:block lg:block blur-[.7px]" srcset="">
             </div>
         </div>
+        <div class="mt-20 py-20 bg-[url('images/back.jpg')] text-center bg-left bg-contain">
+            <h3 class="capitalize text-white text-center font-medium text-4xl mb-5">get started today</h3>
+            <p class="text-white w-1/2 m-auto">it's time to take control of your books.buy our software so you can feel like you're doing something productive</p>
+            <button class="border-white/80 text-white">get 6 months free</button>
+        </div>
+        <div class="business mt-11 text-center m-auto md:container lg:container sm:p-8" id="testimonials">
+            <h4 class="font-medium text-3xl mb-3 capitalize">loved by businesses worldwide</h4>
+            <p class="w-1/2 m-auto text-gray-600">Our software is so simple that people can’t help but fall in love with it. Simplicity is easy when you just skip tons of mission-critical features.</p>
+            <div class="grids grid gap-5 grid-cols-1 m-auto p-4 md:grid-cols-3 lg:grid-cols-3 mt-12">
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">The best part about TaxPal is every time I pay my employees, my bank balance doesn’t go down like it used to. Looking forward to spending this extra cash when I figure out why my card is being declined.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">There are so many things I had to do with my old software that I just don’t do at all with TaxPal. Suspicious but I can’t say I don’t love it.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+                <div class="card bg-white shadow-2xl text-start p-5 rounded-xl">
+                    <p class="mb-5 text-lg leading-8">TaxPal is so easy to use I can’t help but wonder if it’s really doing the things the government expects me to do.</p>
+                    <hr class="my-10">
+                    <div class="userInfo flex items-center justify-between mb-5">
+                        <div class="text">
+                            <h4 class="font-semibold">sayed rady</h4>
+                            <p class="text-gray-500 capitalize">Front-end developer</p>
+                        </div>
+                        <img src="images/user.webp" class="rounded-full" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-900">
+            <div class="pricing md:container lg:container p-9 my-11  text-center m-auto md:py-20 lg:py-20" id="pricing">
+                <h3 class="text-white text-3xl font-medium mb-5">Simple pricing, for everyone.</h3>
+                <p class="text-gray-600">It doesn’t matter what size your business is, our software won’t work well for you.</p>
+                <div class="plans grid gap-16 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 mt-6">
+                    <div class="plan text-start rounded-2xl py-10">
+                        <h2 class="text-3xl text-white font-semibold mb-2">$9</h2>
+                        <p class="text-lg text-white font-semibold mb-2">starter</p>
+                        <p class="text-gray-600 mb-4">good for anyone who is self-employed and just getting started</p>
+                        <button class="border-white text-white">get started</button>
+                        <ul class="text-white mt-7 flex flex-col gap-3">
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Connect up to 2 bank accounts</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Track up to 15 expenses per month</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Export up to 3 reports</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan scale-105 text-start bg-blue-700 p-4 rounded-2xl py-10">
+                        <h2 class="text-3xl text-white font-semibold mb-2">$22</h2>
+                        <p class="text-lg text-white font-semibold mb-2">Small business</p>
+                        <p class="text-gray-300 mb-4">Perfect for small / medium sized businesses.</p>
+                        <button class="border-white text-white m-0 w-full">get started</button>
+                        <ul class="text-white mt-7 flex flex-col gap-3">
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Connect up to 2 bank accounts</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Track up to 15 expenses per month</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Export up to 3 reports</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Track up to 15 expenses per month</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Export up to 3 reports</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="plan text-start rounded-2xl py-10">
+                        <h2 class="text-3xl text-white font-semibold mb-2">$9</h2>
+                        <p class="text-lg text-white font-semibold mb-2">starter</p>
+                        <p class="text-gray-600 mb-4">good for anyone who is self-employed and just getting started</p>
+                        <button class="border-white text-white">get started</button>
+                        <ul class="text-white mt-7 flex flex-col gap-3">
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Connect up to 2 bank accounts</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Track up to 15 expenses per month</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Send 10 quotes and invoices</p>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                                <p>Export up to 3 reports</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer bg-[url('images/footer.jpg')] bg-cover">
+            <div class="p-5 md:container lg:container">
+                <h3 class="text-3xl font-medium mb-4">Frequently asked questions</h3>
+                <p class="text-gray-600 w-1/2">If you can’t find what you’re looking for, email our support team and if you’re lucky someone will get back to you.</p>
+                <div class="columns-1 md:columns-3 lg:columns-3  mt-10 gap-7">
+                    <div class="flex flex-col gap-7">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-7">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-7">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <h3 class="font-medium capitalize text-lg">does taxpal handle vat?</h3>
+                            <p class="text-sm">Well no, but if you move your company offshore you can probably ignore it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo flex items-center gap-1 capitalize text-center w-fit m-auto mt-20 mb-7">
+                    <div class="shape w-10 h-10 rounded-full p-2 bg-blue-700 relative">
+                        <div class="absolute h-4 w-8 start-1 bg-white rounded-b-full bottom-1"></div>
+                    </div>
+                <p class="font-bold">tax<span class="text-blue-700 capitalize font-bold">Pal</span></p>
+            </div>
+            <ul class="flex justify-center gap-5 mb-6 pb-5">
+                <li><a href="#features" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">features</a></li>
+                <li><a href="#testimonials" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">testimonials</a></li>
+                <li><a href="#pricing" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">pricing</a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="footerCopyRights flex md:flex-row lg:flex-row p-4">
+            <p class="text-gray-600 flex-1">Copyright © 2024 sayed. All rights reserved.</p>
+            <div class="icons flex gap-3">
+                <a href="" class="text-lg text-gray-500 transition-all hover:text-black"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="" class="text-lg text-gray-500 hover:text-blue-700 transition-all"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </div>
+        </div>
+        
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body> 
 </html>
