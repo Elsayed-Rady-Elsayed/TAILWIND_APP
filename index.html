@@ -7,13 +7,29 @@
         <link rel="stylesheet" href="output.css">
     </head>
     <body class="font-sans">
-        <div class="stopshow w-full h-svh absolute z-40 bg-white items-center justify-center">
+        <div class="stopshow w-full h-svh absolute z-50 bg-white items-center justify-center">
             <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
                 <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
             </svg>
+        </div>
+        <div class="offcanvas absolute z-30 w-52 h-svh bg-white pt-4 shadow-xl hidden md:hidden lg:hidden" id="OffCanvas">
+            <div class="header p-4 flex justify-between items-center">
+                <p class="text-black text-lg">menu</p>
+                <div class="text-xl" id="closeOfCanvas">x</div>
+            </div>
+            <div class="nav flex flex-col gap-16 md:block mt-2">
+                <ul class="flex flex-col gap-5 md:gap-5 lg:gap-10">
+                    <li><a href="#features" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">features</a></li>
+                    <li><a href="#testimonials" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">testimonials</a></li>
+                    <li><a href="#pricing" class="capitalize font-normal py-1 px-3 rounded-lg transition-all hover:bg-gray-200">pricing</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="menuShow fixed z-20 top-1/4 rounded-e-2xl left-0 bg-blue-700 p-2 w-fit md:hidden lg:hidden" id="OpenOfCanvass">
+            <ion-icon name="menu-outline" class="text-lg text-white block md:hidden lg:hidden"></ion-icon>
         </div>
         <div class="container mx-auto p-2">
            <div class="header bg-white flex items-center justify-between  gap-7 md:gap-20 justify-start lg:gap-32 justify-start mb-2">
@@ -39,7 +55,6 @@
                     <div class="getStart bg-blue-700 py-2 px-3 rounded-full text-white text-sm font-semibold transition-all cursor-pointer hover:bg-blue-600">
                         get started
                     </div>
-                    <ion-icon name="menu-outline" class="text-lg block md:hidden lg:hidden"></ion-icon>
                 </div>
             </div>
             <div class="landingPage flex items-center justify-center flex-col text-center gap-5 pt-28 lg:pt-64 md:pt-64 pb-5">
@@ -394,7 +409,19 @@
             </div>
         </div>
         
-
+        <script>
+            document.getElementById("OpenOfCanvass").onclick = ()=>{
+                document.getElementById("OffCanvas").classList.remove("hidden");
+              }
+            document.getElementById("closeOfCanvas").onclick = ()=>{
+                document.getElementById("OffCanvas").classList.add("hidden");
+              }
+            document.querySelectorAll("#OffCanvas .nav ul li").forEach(el=>{
+                el.addEventListener("click",()=>{
+                    document.getElementById("OffCanvas").classList.add("hidden");
+                })
+            })
+        </script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body> 
